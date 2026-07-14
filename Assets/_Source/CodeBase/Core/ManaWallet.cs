@@ -4,6 +4,8 @@ public class ManaWallet
 {
     private double _currentMana;
 
+    public double CurrentMana => _currentMana;
+
     public event Action<double> OnManaChanged;
 
     public double AddMana(double amount)
