@@ -41,9 +41,9 @@ public class GeneratorSystem : MonoBehaviour
         return false;
     }
 
-    public void Inject(List<GeneratorState> generatos, ManaWallet manaWallet)
+    public void Inject(List<GeneratorState> generators, ManaWallet manaWallet)
     {
-        _generators.AddRange(generatos);
+        _generators.AddRange(generators);
         _manaWallet = manaWallet;
     }
 }

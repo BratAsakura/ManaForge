@@ -19,7 +19,7 @@ public class GameInstaller : MonoBehaviour
         _clickSystem.Inject(_manaWallet);
         _manaView.Inject(_manaWallet);
 
-        if (_generatorDatas != null)
+        if (_generatorDatas.Count != 0)
         {
             foreach (GeneratorData data in _generatorDatas)
             {
