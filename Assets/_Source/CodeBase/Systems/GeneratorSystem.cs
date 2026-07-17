@@ -30,9 +30,7 @@ public class GeneratorSystem : MonoBehaviour
 
     public bool TryPurchaseGenerator(GeneratorState generator)
     {
-        var currentCost = generator.GeneratorData.BaseCost * Math.Pow(generator.GeneratorData.CostGrowthFactor, generator.PurchasedCount);
-
-        if (_manaWallet.TrySpendMana(currentCost))
+        if (_manaWallet.TrySpendMana(generator.Price))
         {
             generator.IncrementPurchasedCount();
             return true;

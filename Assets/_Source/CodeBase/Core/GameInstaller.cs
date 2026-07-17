@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ public class GameInstaller : MonoBehaviour
     [SerializeField] private ManaView _manaView;
     [SerializeField] private List<GeneratorData> _generatorDatas;
     [SerializeField] private GeneratorSystem _generatorSystem;
+    [SerializeField] private GeneratorListView _generatorListView;
 
     private List<GeneratorState> _allGenerators = new();
 
@@ -28,6 +28,7 @@ public class GameInstaller : MonoBehaviour
             }
 
             _generatorSystem.Inject(_allGenerators, _manaWallet);
+            _generatorListView.Inject(_allGenerators, _generatorSystem);
         }
     }
 }
