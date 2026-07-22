@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21652269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21652271}
+  - component: {fileID: 21652270}
+  m_Layer: 0
+  m_Name: UpgradeSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &21652270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21652269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b893508e9a5be4478699735c92962f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeSystem
+--- !u!4 &21652271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21652269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.07, y: 5.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289072151
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +245,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4fdcefd56133eb499b233bae94241e4, type: 2}
   _generatorSystem: {fileID: 1802365159}
   _generatorListView: {fileID: 289072152}
+  _upgradeSystem: {fileID: 21652270}
+  _upgradeDatas:
+  - {fileID: 11400000, guid: 61f32b24891643a46b330dc92b0aca54, type: 2}
+  - {fileID: 11400000, guid: c985ef960840e7743ad5a2b0f48708db, type: 2}
 --- !u!4 &345306104
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,3 +1303,4 @@ SceneRoots:
   - {fileID: 1802365160}
   - {fileID: 1257352918}
   - {fileID: 289072153}
+  - {fileID: 21652271}
