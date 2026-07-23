@@ -14,7 +14,6 @@ public class GameInstaller : MonoBehaviour
     [SerializeField] private UpgradeListView _upgradeListView;
 
     private List<GeneratorState> _allGenerators = new();
-
     private ManaWallet _manaWallet;
 
     private void Awake()
@@ -39,11 +38,5 @@ public class GameInstaller : MonoBehaviour
 
         _saveSystem.Inject(_manaWallet, _generatorSystem, _upgradeSystem);
         _saveSystem.LoadGame();
-    }
-
-    [ContextMenu("Test Buy Upgrade")]
-    private void TestBuyUpgrade()
-    {
-        _upgradeSystem.TryPurchaseUpgrade(_upgradeDatas[0]);
     }
 }

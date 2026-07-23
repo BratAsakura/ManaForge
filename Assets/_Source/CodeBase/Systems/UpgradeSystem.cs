@@ -42,9 +42,7 @@ public class UpgradeSystem : MonoBehaviour, ISaveable
     public void Save(GameData data)
     {
         foreach (var upgrade in _upgradeDatas)
-        {
             data.PurchasedUpgrades.Add(upgrade.UpgradeName);
-        }
     }
 
     public bool TryPurchaseUpgrade(UpgradeData upgrade)

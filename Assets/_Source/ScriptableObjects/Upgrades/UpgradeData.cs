@@ -13,4 +13,3 @@ public class UpgradeData : ScriptableObject
     public EffectType EffectType => _effectType;
     public double MultiplierValue => _multiplierValue;
 }
-

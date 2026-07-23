@@ -50,11 +50,6 @@ public class GeneratorSystem : MonoBehaviour, ISaveable
         upgradeSystem.OnChangePowerGenerator += OnChangePowerGenerator;
     }
 
-    private void OnChangePowerGenerator(double multiplier)
-    {
-        _generatorMultiplier *= multiplier;
-    }
-
     public void Save(GameData data)
     {
         foreach (GeneratorState generator in _generators)
@@ -81,5 +76,10 @@ public class GeneratorSystem : MonoBehaviour, ISaveable
                 }
             }
         }
+    }
+
+    private void OnChangePowerGenerator(double multiplier)
+    {
+        _generatorMultiplier *= multiplier;
     }
 }

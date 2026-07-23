@@ -16,7 +16,6 @@ public class SaveSystem : MonoBehaviour
     public void Inject(ManaWallet manaWallet, GeneratorSystem generatorSystem, UpgradeSystem upgradeSystem)
     {
         _saveFolder = Application.persistentDataPath + "/save.json";
-
         _saveables.Add(manaWallet);
         _saveables.Add(generatorSystem);
         _saveables.Add(upgradeSystem);
@@ -30,9 +29,7 @@ public class SaveSystem : MonoBehaviour
         GameData data = new GameData();
 
         foreach (ISaveable saveable in _saveables)
-        {
             saveable.Save(data);
-        }
 
         Save(data);
     }
@@ -52,9 +49,7 @@ public class SaveSystem : MonoBehaviour
         GameData data = JsonConvert.DeserializeObject<GameData>(json);
 
         foreach (ISaveable saveable in _saveables)
-        {
             saveable.Load(data);
-        }
     }
 
     private void Save(GameData data)

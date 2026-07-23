@@ -20,28 +20,24 @@ public class ManaWallet : ISaveable
         return _currentMana;
     }
 
+    public void Save(GameData data)
+    {
+        data.CurrentMana = _currentMana;
+    }
+
     public void Load(GameData data)
     {
         _currentMana = data.CurrentMana;
         OnManaChanged?.Invoke(_currentMana);
     }
 
-    public void Save(GameData data)
-    {
-        data.CurrentMana = _currentMana;
-    }
-
     public bool TrySpendMana(double amount)
     {
         if (IsInvalidAmount(amount))
-        {
             return false;
-        }
 
         if (amount > _currentMana)
-        {
             return false;
-        }
 
         _currentMana -= amount;
         OnManaChanged?.Invoke(_currentMana);

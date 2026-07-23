@@ -11,9 +11,9 @@ public class GeneratorView : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private Button _buyButton;
 
-    public event Action<GeneratorState> OnBuyClicked;
-
     private GeneratorState _generatorState;
+
+    public event Action<GeneratorState> OnBuyClicked;
 
     public void Inject(GeneratorState generatorState)
     {
