@@ -242,12 +242,17 @@ MonoBehaviour:
   _manaView: {fileID: 1339905672}
   _generatorDatas:
   - {fileID: 11400000, guid: e4fdcefd56133eb499b233bae94241e4, type: 2}
+  - {fileID: 11400000, guid: c9056512fe3f68a4cbe975f583b2be98, type: 2}
+  - {fileID: 11400000, guid: 1c251257689203147b042203e3ba02ec, type: 2}
+  - {fileID: 11400000, guid: 0c33e779d6e91d84f98a1c56fc506649, type: 2}
   _generatorSystem: {fileID: 1802365159}
   _generatorListView: {fileID: 289072152}
   _upgradeSystem: {fileID: 21652270}
   _upgradeDatas:
   - {fileID: 11400000, guid: 61f32b24891643a46b330dc92b0aca54, type: 2}
   - {fileID: 11400000, guid: c985ef960840e7743ad5a2b0f48708db, type: 2}
+  - {fileID: 11400000, guid: 2ffd6f582119ea346ae3f31f3c65cd76, type: 2}
+  - {fileID: 11400000, guid: 285518716e153fa48b93b0320b42edae, type: 2}
   _saveSystem: {fileID: 1102647947}
   _upgradeListView: {fileID: 520985951}
 --- !u!4 &345306104
@@ -586,7 +591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1051, y: 27}
+  m_AnchoredPosition: {x: -1051, y: 85}
   m_SizeDelta: {x: 237.11, y: 284.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788901657
@@ -607,7 +612,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 120
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1254,7 +1259,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 140
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
