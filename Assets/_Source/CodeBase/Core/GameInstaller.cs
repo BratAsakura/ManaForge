@@ -11,6 +11,7 @@ public class GameInstaller : MonoBehaviour
     [SerializeField] private UpgradeSystem _upgradeSystem;
     [SerializeField] private List<UpgradeData> _upgradeDatas;
     [SerializeField] private SaveSystem _saveSystem;
+    [SerializeField] private UpgradeListView _upgradeListView;
 
     private List<GeneratorState> _allGenerators = new();
 
@@ -22,6 +23,7 @@ public class GameInstaller : MonoBehaviour
         _clickSystem.Inject(_manaWallet, _upgradeSystem);
         _manaView.Inject(_manaWallet);
         _upgradeSystem.Inject(_manaWallet, _upgradeDatas);
+        _upgradeListView.Inject(_upgradeDatas, _upgradeSystem);
 
         if (_generatorDatas.Count != 0)
         {
