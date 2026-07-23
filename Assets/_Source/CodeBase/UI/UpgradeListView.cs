@@ -6,6 +6,8 @@ public class UpgradeListView : MonoBehaviour
     [SerializeField] private UpgradeView _prefab;
     [SerializeField] private Transform _container;
 
+    private Dictionary<UpgradeData, UpgradeView> _views = new();
+
     public void Inject(List<UpgradeData> upgrades, UpgradeSystem upgradeSystem)
     {
         foreach (UpgradeData data in upgrades)
@@ -17,6 +19,15 @@ public class UpgradeListView : MonoBehaviour
                 if (upgradeSystem.TryPurchaseUpgrade(upgrade))
                     view.Hide();
             };
+            _views[data] = view;
         }
+
+        upgradeSystem.OnUpgradeLoaded += OnUpgradeLoaded;
+    }
+
+    private void OnUpgradeLoaded(UpgradeData upgrade)
+    {
+        if (_views.TryGetValue(upgrade, out UpgradeView view))
+            view.Hide();
     }
 }

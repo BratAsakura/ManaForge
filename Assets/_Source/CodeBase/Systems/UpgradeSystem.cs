@@ -11,6 +11,7 @@ public class UpgradeSystem : MonoBehaviour, ISaveable
     public event Action<double> OnChangePowerClick;
     public event Action<double> OnChangePowerGenerator;
     public event Action OnUpgradePurchased;
+    public event Action<UpgradeData> OnUpgradeLoaded;
 
     public void Inject(ManaWallet manaWallet, List<UpgradeData> allUpgrades)
     {
@@ -27,6 +28,7 @@ public class UpgradeSystem : MonoBehaviour, ISaveable
                 if (_allUpgrades[i].UpgradeName == data.PurchasedUpgrades[j])
                 {
                     _upgradeDatas.Add(_allUpgrades[i]);
+                    OnUpgradeLoaded?.Invoke(_allUpgrades[i]);
 
                     if (_allUpgrades[i].EffectType == EffectType.ClickMultiplier)
                         OnChangePowerClick?.Invoke(_allUpgrades[i].MultiplierValue);
