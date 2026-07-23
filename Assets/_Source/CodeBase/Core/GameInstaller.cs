@@ -10,6 +10,7 @@ public class GameInstaller : MonoBehaviour
     [SerializeField] private GeneratorListView _generatorListView;
     [SerializeField] private UpgradeSystem _upgradeSystem;
     [SerializeField] private List<UpgradeData> _upgradeDatas;
+    [SerializeField] private SaveSystem _saveSystem;
 
     private List<GeneratorState> _allGenerators = new();
 
@@ -20,7 +21,7 @@ public class GameInstaller : MonoBehaviour
         _manaWallet = new ManaWallet();
         _clickSystem.Inject(_manaWallet, _upgradeSystem);
         _manaView.Inject(_manaWallet);
-        _upgradeSystem.Inject(_manaWallet);
+        _upgradeSystem.Inject(_manaWallet, _upgradeDatas);
 
         if (_generatorDatas.Count != 0)
         {
@@ -33,5 +34,14 @@ public class GameInstaller : MonoBehaviour
             _generatorSystem.Inject(_allGenerators, _manaWallet, _upgradeSystem);
             _generatorListView.Inject(_allGenerators, _generatorSystem);
         }
+
+        _saveSystem.Inject(_manaWallet, _generatorSystem, _upgradeSystem);
+        _saveSystem.LoadGame();
+    }
+
+    [ContextMenu("Test Buy Upgrade")]
+    private void TestBuyUpgrade()
+    {
+        _upgradeSystem.TryPurchaseUpgrade(_upgradeDatas[0]);
     }
 }

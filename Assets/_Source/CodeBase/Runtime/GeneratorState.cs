@@ -25,6 +25,13 @@ public class GeneratorState
         OnChangePurchasedCount?.Invoke(_purchasedCount, _price);
     }
 
+    public void SetPurchasedCount(int value)
+    {
+        _purchasedCount = value;
+        _price = CalculatePrice();
+        OnChangePurchasedCount?.Invoke(_purchasedCount, _price);
+    }
+
     private double CalculatePrice()
     {
         return _generatorData.BaseCost * Math.Pow(_generatorData.CostGrowthFactor, _purchasedCount);
