@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7dfc82e7bfa844aaff5e414e3e54d1, type: 3}
   m_Name: Ancient
   m_EditorClassIdentifier: Assembly-CSharp::GeneratorData
-  _generatorName: 
-  _baseCost: 0
-  _costGrowthFactor: 0
-  _baseIncomePerSecond: 0
+  _generatorName: "\u0414\u0440\u0435\u0432\u043D\u0438\u0439"
+  _baseCost: 10000
+  _costGrowthFactor: 1.1
+  _baseIncomePerSecond: 50

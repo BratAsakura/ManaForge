@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51d59296934b504595eb6dc347c2858, type: 3}
   m_Name: UpgradeData 1
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  _upgradeName: 
-  _cost: 0
-  _effectType: 0
-  _multiplierValue: 0
+  _upgradeName: "\u0428\u043A\u043E\u043B\u0430 \u043C\u0430\u0433\u0438\u0438"
+  _cost: 200
+  _effectType: 1
+  _multiplierValue: 2

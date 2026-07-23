@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GeneratorData
   _generatorName: "\u0423\u0447\u0435\u043D\u0438\u043A"
   _baseCost: 10
-  _costGrowthFactor: 1.55
-  _baseIncomePerSecond: 1
+  _costGrowthFactor: 1.07
+  _baseIncomePerSecond: 0.1

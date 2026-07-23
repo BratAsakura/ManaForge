@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51d59296934b504595eb6dc347c2858, type: 3}
   m_Name: UpgradeGenerator
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  _upgradeName: Generator
-  _cost: 10
+  _upgradeName: "\u0410\u043A\u0430\u0434\u0435\u043C\u0438\u044F"
+  _cost: 2000
   _effectType: 1
-  _multiplierValue: 1.02
+  _multiplierValue: 3
