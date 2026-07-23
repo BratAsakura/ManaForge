@@ -20,7 +20,7 @@ public class GeneratorView : MonoBehaviour
         _generatorState = generatorState;
         _name.SetText(_generatorState.GeneratorData.GeneratorName);
         _count.SetText(_generatorState.PurchasedCount.ToString());
-        _price.SetText(_generatorState.Price.ToString());
+        _price.SetText(NumberFormatter.Format(_generatorState.Price));
         _generatorState.OnChangePurchasedCount += OnChangePurchasedCount;
         _buyButton.onClick.RemoveListener(HandleBuyClicked);
         _buyButton.onClick.AddListener(HandleBuyClicked);
@@ -29,7 +29,7 @@ public class GeneratorView : MonoBehaviour
     private void OnChangePurchasedCount(int value, double price)
     {
         _count.SetText(value.ToString());
-        _price.SetText(price.ToString());
+        _price.SetText(NumberFormatter.Format(price));
     }
 
     private void HandleBuyClicked()

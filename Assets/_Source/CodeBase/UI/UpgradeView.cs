@@ -17,7 +17,7 @@ public class UpgradeView : MonoBehaviour
     {
         _upgradeData = upgradeData;
         _name.SetText(_upgradeData.UpgradeName);
-        _price.SetText(_upgradeData.Cost.ToString());
+        _price.SetText(NumberFormatter.Format(_upgradeData.Cost));
 
         _buyButton.onClick.RemoveListener(HandleBuyClicked);
         _buyButton.onClick.AddListener(HandleBuyClicked);

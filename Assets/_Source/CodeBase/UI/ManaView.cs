@@ -15,11 +15,11 @@ public class ManaView : MonoBehaviour
     {
         _manaWallet = manaWallet;
         _manaWallet.OnManaChanged += HandleManaChanged;
-        _text.SetText(_manaWallet.CurrentMana.ToString());
+        _text.SetText(NumberFormatter.Format(_manaWallet.CurrentMana));
     }
 
     private void HandleManaChanged(double value)
     {
-        _text.SetText(value.ToString());
+        _text.SetText(NumberFormatter.Format(value));
     }
 }
